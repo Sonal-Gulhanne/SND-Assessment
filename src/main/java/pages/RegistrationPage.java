@@ -7,13 +7,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import utils.RunnerUtil;
-
 public class RegistrationPage {
 
 	//Object Declaration
-		public static Properties prop;
-		RunnerUtil runner = new RunnerUtil();
 		WebDriver driver = null;
 		WebElement element = null;
 		
@@ -31,7 +27,7 @@ public class RegistrationPage {
 		public void setFirstName(String firstName)
 	    {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			//js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 			 element = driver.findElement(By.xpath(xpathFirstNameTextbox));
 			 element.sendKeys(firstName);
 
